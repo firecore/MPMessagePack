@@ -33,7 +33,7 @@ If you need to use an ordered dictionary.
 ```objc
 MPOrderedDictionary *dict = [[MPOrderedDictionary alloc] init];
 [dict addEntriesFromDictionary:@{@"c": @(1), @"b": @(2), @"a": @(3)}];
-[dict sortKeysUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+[dict sortKeysUsingSelector:@selector(compare:)];
 [dict mp_messagePack];
 ```
 

@@ -109,7 +109,7 @@ static size_t mp_writer(cmp_ctx_t *ctx, const void *data, size_t count) {
     
     NSEnumerator *keyEnumerator;
     if ((options & MPMessagePackWriterOptionsSortDictionaryKeys) == MPMessagePackWriterOptionsSortDictionaryKeys) {
-      keyEnumerator = [[[obj allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)] objectEnumerator];
+      keyEnumerator = [[[obj allKeys] sortedArrayUsingSelector:@selector(compare:)] objectEnumerator];
     } else {
       keyEnumerator = [obj keyEnumerator];
     }
